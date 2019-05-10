@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-@Component({
+@Component({ 
   selector: 'app-root',
-  template: `<app-customers></app-customers>`
+  template: `
+    <router-outlet></router-outlet>
+  `
 })
-export class AppComponent {
-  constructor(){}
+export class AppComponent implements OnInit {
+  constructor() { }
 
-  ngOnInit(){
+  ngOnInit() {
+
   }
+  
 }
-
-// first component that will load
