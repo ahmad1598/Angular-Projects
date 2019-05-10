@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import {SharedModule} from '../shared/shared.module';
@@ -7,7 +8,11 @@ import { CustomersListComponent } from './customers-list/customers-list.componen
 import {FilterTextboxComponent} from './customers-list/filter-textbox.component';
 @NgModule({
   declarations: [ CustomersComponent, CustomersListComponent, FilterTextboxComponent],
-  imports: [CommonModule,SharedModule],
+  imports: [CommonModule,SharedModule,FormsModule],
   exports:[CustomersComponent]
 })
 export class CustomersModule { }
+
+
+//CommonModule has directive includes ngFor, ngIf, ngClass
+//SharedModule has CapitilizePipe
